@@ -1,13 +1,15 @@
 import { React } from 'react';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import App from './App';
-import NavBar from './NavBar';
+import Home from './Home/Home'
+import FoodDetails from './FoodDetails/FoodDetails';
 
 const Routing = () => {
     return(
         <BrowserRouter>
-            <NavBar />
-            <App />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/foodDetails/:id' element={<FoodDetails />}/>
+            </Routes>
         </BrowserRouter>
     );
 }
