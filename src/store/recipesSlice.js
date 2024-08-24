@@ -37,6 +37,7 @@ const recipes = createSlice({
             state.isLoading = false;
         }).addCase(fetchOneRecipe.rejected, (state, action)=>{
             state.error = action.error.message;
+            state.isLoading = false;
         })
     }
 });
